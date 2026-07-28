@@ -8,8 +8,8 @@ apt install -y clang
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-touch ~/.config/nvim/init.vim
-nvim ~/.config/nvim/init.vim
+#touch ~/.config/nvim/init.vim
+#nvim ~/.config/nvim/init.vim
 mkdir -p ~/.config/nvim && cat << 'EOF' > ~/.config/nvim/init.vim
 call plug#begin()
 Plug 'folke/tokyonight.nvim'
