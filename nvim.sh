@@ -1,15 +1,32 @@
 apt install -y neovim
+apt install -y git
+apt install -y nodejs
+apt install -y python
+apt install -y ripgrep
+apt install -y fzf
+apt install -y clang
+
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 touch ~/.config/nvim/init.vim
 nvim ~/.config/nvim/init.vim
+
 code:
-
 call plug#begin()
-" Use release branch (recommended)
+Plug 'folke/tokyonight.nvim'
+Plug 'preservim/nerdtree'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'jiangmiao/auto-pairs'
+Plug 'mg979/vim-visual-multi'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'itchyny/lightline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 call plug#end()
+
 """ coc config
 " ---- CoC Automatically Managed Extensions Marketplace List ----
 let g:coc_global_extensions = [
