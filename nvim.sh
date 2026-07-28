@@ -14,8 +14,6 @@ mkdir -p ~/.config/nvim && cat << 'EOF' > ~/.config/nvim/init.vim
 call plug#begin()
 Plug 'folke/tokyonight.nvim'
 Plug 'preservim/nerdtree'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
