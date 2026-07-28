@@ -1,3 +1,4 @@
+apt update -y
 apt install -y clang
 apt install -y python
 apt install -y php
